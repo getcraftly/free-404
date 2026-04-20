@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* ========================================
+   Craftly Free 404 Template
+   Tailwind CSS v4 Theme Configuration
+   ======================================== */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: oklch(0.16 0.015 264);
+  --foreground: oklch(0.97 0.005 264);
+  --primary: oklch(0.72 0.18 266);
+  --secondary: oklch(0.78 0.18 2);
+  --muted: oklch(0.22 0.015 264);
+  --muted-foreground: oklch(0.68 0.015 264);
+  --border: oklch(0.30 0.015 264);
+  --accent: oklch(0.78 0.14 180);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow: hidden;
+  font-feature-settings: "ss01", "cv11";
+}
+
+html {
+  height: 100%;
+}
+
+/* Star twinkle keyframes */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(2deg); }
+  66% { transform: translateY(6px) rotate(-2deg); }
+}
+
+@keyframes drift {
+  0% { transform: translateX(0px) translateY(0px); }
+  25% { transform: translateX(8px) translateY(-6px); }
+  50% { transform: translateX(-4px) translateY(-12px); }
+  75% { transform: translateX(-8px) translateY(-4px); }
+  100% { transform: translateX(0px) translateY(0px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+}
